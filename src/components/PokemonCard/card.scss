@@ -1,0 +1,21 @@
+.card {
+  margin:10px;
+  width: 190px;
+  text-align: center;
+  margin-bottom: 65px;
+  .ant-card-body{
+    padding:14px;
+    padding-bottom:0;
+  }
+  .cardList{
+    padding-left: 0px;
+    list-style-type: none;
+    text-align: left;
+    .cardItem{
+      margin-bottom: 5px;
+      span{
+        font-weight: bold;
+      }
+    }
+  }
+}
