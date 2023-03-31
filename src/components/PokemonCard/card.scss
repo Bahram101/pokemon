@@ -13,9 +13,18 @@
     text-align: left;
     .cardItem{
       margin-bottom: 5px;
+      text-align: center;
+      text-transform: uppercase;
       span{
         font-weight: bold;
       }
     }
+  } 
+ 
+}
+
+@media(max-width: 597px){
+  .ant-card{
+    width: 100%;
   }
 }

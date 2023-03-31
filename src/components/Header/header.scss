@@ -1,9 +1,43 @@
 .header {
   width: 100% !important;
   padding: 25px 0;
+  border-bottom: 1px solid #e7e7e7;
   .container {
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
+    align-items: center;
+    .header__search {
+      
+      position: relative;
+      .searchIcon {
+        width: 18px;
+        opacity: 0.5;
+        position: absolute;
+        left: 7px;
+        top: 7px;
+        right: 5px;
+        z-index: 1;
+        cursor: pointer;
+        &:hover {
+          opacity: 1;
+        }
+      }
+      .searchInput{
+        padding-left: 30px;
+      }
+      .closeIcon {
+        width: 20px;
+        opacity: 0.5;
+        position: absolute;
+        right: 0px;
+        top: 5px;
+        right: 5px;
+        cursor: pointer;
+        &:hover {
+          opacity: 1;
+        }
+      }
+    }
   }
 }

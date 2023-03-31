@@ -1,10 +1,10 @@
 import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
 import axios from "../../axios";
 
-export const getPokemonList = createAsyncThunk("pokemonList", async () => {
+export const getPokemonList = createAsyncThunk("pokemonList", async ({page, limit}) => {
   const pokemonList = [];
-  for (let i = 1; i <= 20; i++) {
-    const { data } = await axios.get(`pokemon/${i}`);
+  for (let i = 1; i <= limit; i++) {
+    const { data } = await axios.get(`pokemon/${page*limit+i}`);
     pokemonList.push(data);
   }
   return pokemonList;
