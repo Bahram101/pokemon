@@ -14,7 +14,7 @@ export const Favorite = () => {
   return (
     <div className='content'>
       <div className='container'>
-        <div className='content__items'>
+        <div className='content__items' style={{justifyContent:'left'}}>
           {items?.map((item, index) => (
             <PokemonCard
               props={{ ...item, favorite: favorites.includes(item.id) }}

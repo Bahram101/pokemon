@@ -1,8 +1,8 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import axios from "../../axios";
+import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
+import axios from '../../axios';
 
 export const getPokemonList = createAsyncThunk(
-  "pokemonList",
+  'pokemonList',
   async ({ page = 0, limit = 0, list = [] }) => {
     const pokemonList = [];
     if (!list.length) {
@@ -23,26 +23,26 @@ export const getPokemonList = createAsyncThunk(
 const initialState = {
   pokemonList: {
     items: [],
-    status: "loading",
+    status: 'loading',
   },
 };
 
 const pokemonSlice = createSlice({
-  name: "pokemonList",
+  name: 'pokemonList',
   initialState,
   reducers: {},
   extraReducers: {
     [getPokemonList.pending]: (state) => {
       state.pokemonList.items = [];
-      state.pokemonList.status = "loading";
+      state.pokemonList.status = 'loading';
     },
     [getPokemonList.fulfilled]: (state, action) => {
       state.pokemonList.items = action.payload;
-      state.pokemonList.status = "loaded";
+      state.pokemonList.status = 'loaded';
     },
     [getPokemonList.rejected]: (state) => {
       state.pokemonList.items = [];
-      state.pokemonList.status = "error";
+      state.pokemonList.status = 'error';
     },
   },
 });
