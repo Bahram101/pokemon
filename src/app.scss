@@ -19,6 +19,7 @@ body {
   margin-bottom: 50px;
 
   .content {
+    // min-height: 60vh;
     padding: 40px 0;
     .container {
       margin: 0 auto;
@@ -36,7 +37,7 @@ body {
     .ant-typography {
       border: 1px solid #fe5f1e;
       border-radius: 7px;
-      padding: 4px 7px;
+      padding: 3px 9px;
     }
     .ant-space {
       color: #fe5f1e;

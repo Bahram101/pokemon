@@ -1,43 +1,43 @@
-import React, { useState } from "react";
-import ReactPaginate from "react-paginate";
-import { DownOutlined } from "@ant-design/icons";
-import { Dropdown, Space, Typography } from "antd";
-import "./pagination.scss";
+import React, { useState } from 'react';
+import ReactPaginate from 'react-paginate';
+import { DownOutlined } from '@ant-design/icons';
+import { Dropdown, Space, Typography } from 'antd';
+import './pagination.scss';
 
 const Pagination = ({ onChange, onChangeLimit }) => {
-  const [selectedLimit, setSelectedLimit] = useState(10)
+  const [selectedLimit, setSelectedLimit] = useState(10);
   const items = [
     {
       key: 10,
-      label: "10",
+      label: '10',
     },
     {
       key: 20,
-      label: "20",
+      label: '20',
     },
     {
       key: 50,
-      label: "50",
+      label: '50',
     },
   ];
 
   const onClickItem = (e) => {
     onChangeLimit(+e.key);
-    setSelectedLimit(+e.key)
+    setSelectedLimit(+e.key);
   };
 
   return (
     <div
       style={{
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "space-between",
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'space-between',
       }}
     >
       <ReactPaginate
-        breakLabel="..."
-        previousLabel="<  "
-        nextLabel=" >"
+        breakLabel='...'
+        previousLabel='<  '
+        nextLabel=' >'
         onPageChange={(any) => onChange(any.selected)}
         pageRangeDisplayed={3}
         pageCount={7}
@@ -48,7 +48,7 @@ const Pagination = ({ onChange, onChangeLimit }) => {
         menu={{
           items,
           selectable: true,
-          defaultSelectedKeys: ["3"],
+          defaultSelectedKeys: ['3'],
           onClick: onClickItem,
         }}
       >
