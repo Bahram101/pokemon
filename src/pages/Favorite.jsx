@@ -9,7 +9,7 @@ export const Favorite = () => {
   const { items } = useSelector((state) => state.pokemonReducer.pokemonList);
   useEffect(() => {
     dispatch(getPokemonList({ list: favorites }));
-  }, []);
+  }, [favorites]);
 
   return (
     <div className='content'>

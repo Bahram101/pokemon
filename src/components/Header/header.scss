@@ -27,6 +27,7 @@
         .searchInput {
           padding-left: 30px;
           width: 230px;
+          margin-right: 50px;
         }
         .closeIcon {
           width: 20px;
@@ -41,10 +42,28 @@
           }
         }
       }
-      .favoriteIcon {
-        width: 25px;
-        opacity: 0.6;
-        padding-left: 50px;
+      .favoriteBlock {
+        position: relative;
+        .favoriteCount{
+          position: absolute;
+          background: red;
+          color: white;
+          padding: 2px 1px 0 1px;
+          font-size: 12px;
+          border-radius: 50%;
+          right: -8px;
+          top: -5px;
+          z-index: 2;
+          width: 17px;
+          height: 17px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .favoriteIcon {
+          width: 25px;
+          opacity: 0.6;
+        }
       }
     }
   }
@@ -59,7 +78,7 @@
       }
       .header__right {
         .searchInput {
-         max-width: 200px;
+          max-width: 200px;
         }
       }
       .favoriteIcon {
